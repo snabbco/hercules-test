@@ -6,7 +6,7 @@ builtins.mapAttrs (k: _v:
   pkgs.recurseIntoAttrs {
     # These two attributes will appear in your job for each platform.
     hello = pkgs.hello;
-    cow-hello = pkgs.runCommand "cow-hello" {
+    cow-hello = pkgs.runCommand "cow-hello2" {
       buildInputs = [ pkgs.hello pkgs.cowsay ];
     } ''
       hello | cowsay > $out
